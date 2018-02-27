@@ -1,0 +1,34 @@
+
+Tutorial Justin Hang
+https://www.youtube.com/watch?v=bJB9tv4ThV4
+
+Any node can publish a message to any topic
+Any node can subscribe to any topic
+  Subscribing means registering to see all the data that comes to the topic
+Multiple nodes can publish to the same topic
+Multiple nodes can subscribe to the same topic
+A node can publish to multiple topics
+A node can subscribe to multiple topics
+
+publish/subscribe tools:
+rosnode list
+rosnode info /my_node
+rostopic list
+rostopic info /my_topic
+rostopic echo /my_topic
+rostopic pub /my_topic msg/MsgType "data: value"
+
+All topic have an associated type of data that can be published
+
+Messages: 
+A serialization format for structured data
+Allow nodes written in c++ and python to communicate with each other
+Defined in a .msg file
+Must be compiled into c++/python class before using them 
+
+
+https://www.youtube.com/watch?v=MD255BS0YH4
+ETH:
+https://www.youtube.com/watch?v=0BxVPCInS3M
+TF:
+https://www.youtube.com/watch?v=gnTlLzqFslU&list=PLK0b4e05LnzaOZxQt0OwMRwIa8ysYG9_a&index=3
