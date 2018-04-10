@@ -30,3 +30,14 @@ A useful heuristic to determine whether an expression is a lvalue is to ask if y
 If you can, then it's an lvalue. If you can't, it's ususally an rvalue. 
 That is, given a type T, you can have lvalues of type T as well as rvalues of type T. 
 It's especially important to remember this when dealing with a parameter of rvalue reference type, because the parameter itself is an lvalue.
+class Widget{
+public:
+  Widget(Widget&& rhs); //Widget's move constructor
+};
+Here, it'd be perfectly valid to take rhs's address inside Widgets move constructor, so rhs is an lvalue 
+(by similar reasoning all parameters are lvalues) even though its type is an rvalue reference.
+
+move operations, i.e. move constructor, move assignment operator
+copy operations, i.e. copy constructor, copy assignment operator
+
+
